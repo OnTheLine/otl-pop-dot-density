@@ -1,41 +1,17 @@
-<html>
-<head>
-  <meta charset=utf-8 />
-  <title>CT Population 1900-2010</title>
-  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+$(function() {
 
-  <!-- Load Leaflet from CDN-->
-  <link rel="stylesheet" href="http://cdn.jsdelivr.net/leaflet/0.7.3/leaflet.css" />
-  <script src="http://cdn.jsdelivr.net/leaflet/0.7.3/leaflet.js"></script>
-
-  <!-- Load Esri Leaflet from CDN -->
-  <script src="http://cdn.jsdelivr.net/leaflet.esri/1.0.0/esri-leaflet.js"></script>
-
-  <style type="text/css">
-    body { margin:0; padding:0; }
-    #map { position: absolute; top:0; bottom:0; right:0; left:0; }
-    #infobox a{position:absolute;bottom:0;left:0;background:#fff;color:#000;text-decoration:none;font-family:arial,sans-serif;text-align:center;padding:1px 2px;font-size:12px;line-height:14px;display:inline-block;}
-  </style>
-</head>
-<body>
-
-<div id="map"></div>
-	<!-- Infobox -->
-<span id="infobox"><a href="http://github.com/jackdougherty/otl-historical-dot-density">1,000 people = 1 dot, randomly placed in town</a></span>
-
-<script>
-// see ArcGIS Online My Content for extent of tile layer
+  // see ArcGIS Online My Content for extent of tile layer
   var southWest = L.latLng(40.946250, -73.765968),
     northEast = L.latLng(42.046797, -71.771949),
     bounds = L.latLngBounds(southWest, northEast);
 
-// set bounding box as maxBounds to restrict moving the map
-var map = L.map('map', {
+  // set bounding box as maxBounds to restrict moving the map
+  var map = L.map('map', {
     maxBounds: bounds,
     maxZoom: 11, // given that dots are randomly placed, it doesn't make sense to allow zooming further than this level
     minZoom: 8  // check on smaller devices
-});
-// zoom the map to bounding box
+  });
+  // zoom the map to bounding box
   map.fitBounds(bounds);
 
   // set base layers, with the first to be added to the map on startup
@@ -78,14 +54,19 @@ var map = L.map('map', {
     })  // no comma at the end of the list
   };
 
-  var towns = L.esri.featureLayer({
-      url: 'http://services1.arcgis.com/5rblLCKLgS4Td60j/arcgis/rest/services/CTtowns/FeatureServer/0',
-      // simplifyFactor: 0.5,
-      // precision: 5,
-      style: function (feature) {
-        return {color: 'red', weight: 0.5, fillOpacity: 0 };
-      }
-    }).addTo(map);
+  // style the town geojson outlines
+  function style(feature) {
+    return {
+        color: 'red', 
+        weight: 0.5, 
+        fillOpacity: 0
+    };
+  }
+
+  var towns = L.geoJson(data, {
+    style: style,
+    // onEachFeature: onEachFeature // REMOVE THIS?
+  }).addTo(map);
   towns.bindPopup(function (feature) {
     return L.Util.template('<p>{Town}</p>', feature.properties);
   });
@@ -99,7 +80,4 @@ var map = L.map('map', {
        map.attributionControl
      .setPrefix('View <a href="http://github.com/jackdougherty/otl-historical-dot-density">open-source code on GitHub</a>, created with <a href="http://leafletjs.com" title="A JS library for interactive maps">Leaflet</a>');
 
-</script>
-
-</body>
-</html>
+  }); // end of entire function
