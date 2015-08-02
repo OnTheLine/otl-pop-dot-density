@@ -1,14 +1,17 @@
 # otl-historical-dot-density
 historical population dot density maps for On The Line book
 
-## Demos
-1) using ArcGIS online and Esri-Leaflet TileLayer
+## Demo
 http://jackdougherty.github.io/otl-historical-dot-density/index.html
 
-2) animated GIF, created with ArcMap around 2005 (but user cannot stop play or zoom in; no overlays)
-http://jackdougherty.github.io/otl-historical-dot-density/1900-2000-animated.gif
+This replaces the animated GIF suburbanization map that I created around 2005 with ArcMap, but user cannot zoom in or stop player, and no overlays
+- http://jackdougherty.github.io/otl-historical-dot-density/1900-2000-animated.gif
 
-## Steps to create TileLayer with ArcGIS online and Esri-leaflet
+## Steps
+1. Create TileLayer in ArcGIS and host on ArcGIS Online
+2. Code Leaflet map with Esri-leaflet and rangeslider.js
+
+### Create TileLayer in ArcGIS and host on ArcGIS Online
 
 Based on documentation: Publish Tiles on ArcGIS Online https://doc.arcgis.com/en/arcgis-online/share-maps/publish-tiles.htm#GUID-C467C9D7-443D-48D6-90AB-8204E3B9FD83
 
@@ -16,7 +19,7 @@ Requires:
 - ArcMap (I used v 10.2.2)
 - ArcGIS Online organizational account access (I used http://trincoll.maps.arcgis.com/home/content.html)
 
-Prepare historical population data (I used CT towns, 1900-2010, saved in XLS format, column headers cannot begin with numbers)
+Prepare historical population data (I used CT towns, 1900-2010 from CT Secretary of State, saved in XLS format, column headers cannot begin with numbers)
 
 Download shapefile to match population data (I used CT town boundaries, 2010 census, WGS84 projection, downloaded from UConn MAGIC). Note that sourceinfo mentions two towns that do not perfectly match this boundary: West Haven not established until 1921, and Deep River has no data in this file until 1970
 
@@ -52,20 +55,23 @@ In web browser, go to My Content for your ArcGIS Online site (mine is http://tri
 - ArcGIS Online will create tiles with a URL similar to mine (http://tiles.arcgis.com/tiles/5rblLCKLgS4Td60j/arcgis/rest/services/CTPopDot1900/MapServer)
 - WAIT ON THIS in My Content browser window, keep new "Tile Layer," but option to erase "Tile Package" to reduce storage charges for ArcGis Online
 
-## Leaflet code
-In Leaflet (with Esri-Leaflet plugin), code each tile layer to display as desired, based on this L.esriTiledMapLayer example
-- http://esri.github.io/esri-leaflet/examples/tile-layer-1.html
-
-Use rangeslider.js from https://github.com/andreruffert/rangeslider.js
-
-
-### To Do
-- ask others for ideas about how to reduce the tile size, or optimize the workflow (since I could not figure out how to do this from one map tile with multiple layers)
-- on My Content > Tile layer, see Manage Tiles (and figure out if there's a way to optimize this; do not delete Tile Packages)
-
-### Content for copy and paste step above
+#### Notes to copy and paste when creating TileLayers
 Item description summary, tags, access, credits to copy and paste each time:
 - Connecticut town population dot density map, 1900-2010, based on US Census data reported by CT Secretary of State, for On The Line (http://OnTheLine.trincoll.edu)
 - Connecticut
 - CC-BY (freely available if attribution included)
 - Jack Dougherty, Trinity College
+
+## Code Leaflet map with Esri-leaflet and rangeslider.js
+In Leaflet (with Esri-Leaflet plugin), code each tile layer to display as desired, based on this L.esriTiledMapLayer example
+- http://esri.github.io/esri-leaflet/examples/tile-layer-1.html
+
+Use rangeslider.js from https://github.com/andreruffert/rangeslider.js
+
+## Credits
+- Thanks to everyone who created esri-leaflet  
+- Thanks @andreruffer for creating rangeslider.js, which I discovered through @alvinschang, and implemented with help from @erose
+
+
+### To Do
+- add functions to stop rangeslider on click
