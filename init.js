@@ -1,4 +1,37 @@
 $(function() {
+  // init the rangeslider
+  $('input[type="range"]').rangeslider({
+
+    // // Default CSS classes
+    // rangeClass: 'rangeslider',
+    // fillClass: 'rangeslider__fill',
+    // handleClass: 'rangeslider__handle',
+
+    polyfill: false, // appears to enable styling on slider
+
+    // Callback function: brings to front the selected year layer
+    onSlideEnd: function(position, value) {
+      baseLayers[value.toString()].bringToFront();
+    },
+    // Callback function: generates the year that matches slider position
+    onSlide: function(position, value) {
+      $('#sliderOutput').html(value);
+    }
+  });
+
+  var currentYear = 1900;
+  // autoplay a decade every time interval and generate year for display
+  // -- TO DO; re-insert Alvin's function to stop auto player
+  setInterval(function() {
+      if (currentYear == 2010) {
+          currentYear = 1900;
+      } else {
+          currentYear+=10;
+      }
+      baseLayers[currentYear.toString()].bringToFront(); //
+      $('input[type="range"]').val(currentYear).change();
+      $('#sliderOutput').html(currentYear);
+  }, 1000);
 
   // see ArcGIS Online My Content for extent of tile layer
   var southWest = L.latLng(40.946250, -73.765968),
@@ -21,44 +54,44 @@ $(function() {
     }).addTo(map),
     "1910": L.esri.tiledMapLayer({
       url: "http://tiles.arcgis.com/tiles/5rblLCKLgS4Td60j/arcgis/rest/services/CTPopDot1910/MapServer"
-    }),
+    }).addTo(map),
     "1920": L.esri.tiledMapLayer({
       url: "http://tiles.arcgis.com/tiles/5rblLCKLgS4Td60j/arcgis/rest/services/CTPopDot1920/MapServer"
-    }),
+    }).addTo(map),
     "1930": L.esri.tiledMapLayer({
       url: "http://tiles.arcgis.com/tiles/5rblLCKLgS4Td60j/arcgis/rest/services/CTPopDot1930/MapServer"
-    }),
+    }).addTo(map),
     "1940": L.esri.tiledMapLayer({
       url: "http://tiles.arcgis.com/tiles/5rblLCKLgS4Td60j/arcgis/rest/services/CTPopDot1940/MapServer"
-    }),
+    }).addTo(map),
     "1950": L.esri.tiledMapLayer({
       url: "http://tiles.arcgis.com/tiles/5rblLCKLgS4Td60j/arcgis/rest/services/CTPopDot1950/MapServer"
-    }),
+    }).addTo(map),
     "1960": L.esri.tiledMapLayer({
       url: "http://tiles.arcgis.com/tiles/5rblLCKLgS4Td60j/arcgis/rest/services/CTPopDot1960/MapServer"
-    }),
+    }).addTo(map),
     "1970": L.esri.tiledMapLayer({
       url: "http://tiles.arcgis.com/tiles/5rblLCKLgS4Td60j/arcgis/rest/services/CTPopDot1970/MapServer"
-    }),
+    }).addTo(map),
     "1980": L.esri.tiledMapLayer({
       url: "http://tiles.arcgis.com/tiles/5rblLCKLgS4Td60j/arcgis/rest/services/CTPopDot1980/MapServer"
-    }),
+    }).addTo(map),
     "1990": L.esri.tiledMapLayer({
       url: "http://tiles.arcgis.com/tiles/5rblLCKLgS4Td60j/arcgis/rest/services/CTPopDot1990/MapServer"
-    }),
+    }).addTo(map),
     "2000": L.esri.tiledMapLayer({
       url: "http://tiles.arcgis.com/tiles/5rblLCKLgS4Td60j/arcgis/rest/services/CTPopDot2000/MapServer"
-    }),
+    }).addTo(map),
     "2010": L.esri.tiledMapLayer({
       url: "http://tiles.arcgis.com/tiles/5rblLCKLgS4Td60j/arcgis/rest/services/CTPopDot2010/MapServer"
-    })  // no comma at the end of the list
+    }).addTo(map)  // no comma at the end of the list
   };
 
   // style the town geojson outlines
   function style(feature) {
     return {
-        color: 'red', 
-        weight: 0.5, 
+        color: 'red',
+        weight: 0.5,
         fillOpacity: 0
     };
   }
@@ -70,11 +103,6 @@ $(function() {
   towns.bindPopup(function (feature) {
     return L.Util.template('<p>{Town}</p>', feature.properties);
   });
-
-  var overlays = {
-    "CT towns": towns
-  };
-  L.control.layers(baseLayers, overlays, {collapsed: false}).addTo(map);  // collapsed false opens menu on startup
 
   // customize source link to your GitHub repo
        map.attributionControl

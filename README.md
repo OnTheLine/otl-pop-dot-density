@@ -52,12 +52,14 @@ In web browser, go to My Content for your ArcGIS Online site (mine is http://tri
 - ArcGIS Online will create tiles with a URL similar to mine (http://tiles.arcgis.com/tiles/5rblLCKLgS4Td60j/arcgis/rest/services/CTPopDot1900/MapServer)
 - WAIT ON THIS in My Content browser window, keep new "Tile Layer," but option to erase "Tile Package" to reduce storage charges for ArcGis Online
 
+## Leaflet code
 In Leaflet (with Esri-Leaflet plugin), code each tile layer to display as desired, based on this L.esriTiledMapLayer example
 - http://esri.github.io/esri-leaflet/examples/tile-layer-1.html
 
+Use rangeslider.js from https://github.com/andreruffert/rangeslider.js
+
+
 ### To Do
-- currently using simple L.control.layers; need to work on a slider tool (see https://jqueryui.com/slider/#steps)
-- play button to cycle through layers? (https://www.mapbox.com/mapbox.js/example/v1.0.0/cycle-overlays/)
 - ask others for ideas about how to reduce the tile size, or optimize the workflow (since I could not figure out how to do this from one map tile with multiple layers)
 - on My Content > Tile layer, see Manage Tiles (and figure out if there's a way to optimize this; do not delete Tile Packages)
 
