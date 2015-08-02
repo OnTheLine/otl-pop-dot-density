@@ -1,7 +1,7 @@
 body { margin:0; padding:0; }
 #map { position: absolute; top:0; bottom:0; right:0; left:0;}
-#slider { }
-#infobox a{position:absolute;bottom:0;left:0;background:#fff;color:#000;text-decoration:none;font-family:arial,sans-serif;text-align:center;padding:1px 2px;font-size:12px;line-height:14px;display:inline-block;}
+#slider { text-align: center;}
+#sliderOutput { font-size: 1.6em;}
  .mapContainer {
      width: 100%;
      height: 400px;
