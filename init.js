@@ -20,17 +20,24 @@ $(function() {
   });
 
   var currentYear = 1900;
-  // autoplay a decade every time interval and generate year for display
-  // -- TO DO; re-insert Alvin's function to stop auto player
+  // var clicked = false;
+  //  $('.rangeslider__handle').click(function() {
+  //        clicked = true;
+  //  })
+
+  // Autoplay one animation cycle by decade and generate year for display
+  // Stop the loop when year reaches 2010
+  // TO DO: restart when startAnimation button is clicked
+
   setInterval(function() {
-      if (currentYear == 2010) {
-          currentYear = 1900;
-      } else {
+
+        if (currentYear == 2010) {
+        } else {
           currentYear+=10;
-      }
-      baseLayers[currentYear.toString()].bringToFront(); //
-      $('input[type="range"]').val(currentYear).change();
-      $('#sliderOutput').html(currentYear);
+          baseLayers[currentYear.toString()].bringToFront();
+          $('input[type="range"]').val(currentYear).change();
+          $('#sliderOutput').html(currentYear);
+        }
   }, 1000);
 
   // see ArcGIS Online My Content for extent of tile layer
@@ -84,7 +91,7 @@ $(function() {
     }).addTo(map),
     "2010": L.esri.tiledMapLayer({
       url: "http://tiles.arcgis.com/tiles/5rblLCKLgS4Td60j/arcgis/rest/services/CTPopDot2010/MapServer"
-    }).addTo(map)  // no comma at the end of the list
+    }).addTo(map)  // no comma at the end of the list; first map last?
   };
 
   // style the town geojson outlines
@@ -95,10 +102,10 @@ $(function() {
         fillOpacity: 0
     };
   }
-
+// TO DO: fix this overlay layer so that features are clickable; is it hidden behind "bringToFront" of tiles?
   var towns = L.geoJson(data, {
     style: style,
-    // onEachFeature: onEachFeature // REMOVE THIS?
+    // onEachFeature: onEachFeature // Do I still need this?
   }).addTo(map);
   towns.bindPopup(function (feature) {
     return L.Util.template('<p>{Town}</p>', feature.properties);
