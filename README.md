@@ -73,5 +73,10 @@ Use rangeslider.js from https://github.com/andreruffert/rangeslider.js
 - Thanks @andreruffer for creating rangeslider.js, which I discovered through @alvinschang, and implemented with help from @erose
 
 
-### To Do
-- add functions to stop rangeslider on click
+## To Do
+- make the town geoJson layer clickable again to identify names with pop-ups
+- delay initial animation startup until all map tiles are loaded (or optimize code in some way)
+- consider adding town search by name function
+- consider adding overlays such as interstate highways, etc. to test ideas about where suburbanization happened
+- clean up appearance and style.css
+- suggestions and pull requests welcome

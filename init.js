@@ -1,36 +1,27 @@
 $(function() {
   // init the rangeslider
   $('input[type="range"]').rangeslider({
-
-    // // Default CSS classes
-    // rangeClass: 'rangeslider',
-    // fillClass: 'rangeslider__fill',
-    // handleClass: 'rangeslider__handle',
-
     polyfill: false, // appears to enable styling on slider
-
     // Callback function: brings to front the selected year layer
     onSlideEnd: function(position, value) {
       baseLayers[value.toString()].bringToFront();
     },
-    // Callback function: generates the year that matches slider position
+    // Callback function: generates year to match slider position
     onSlide: function(position, value) {
       $('#sliderOutput').html(value);
     }
   });
 
+  // Autoplay on startup, stop at 2010, with replay button
   var currentYear = 1900;
-  // var clicked = false;
-  //  $('.rangeslider__handle').click(function() {
-  //        clicked = true;
-  //  })
 
-  // Autoplay one animation cycle by decade and generate year for display
-  // Stop the loop when year reaches 2010
-  // TO DO: restart when startAnimation button is clicked
+  $(".replayButton").click(function() {
+     $(".leaflet-marker-icon, .leaflet-shadow-pane").fadeOut(200);
+     currentYear = 1900;
+    //  setInterval();
+    });
 
   setInterval(function() {
-
         if (currentYear == 2010) {
         } else {
           currentYear+=10;

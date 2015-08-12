@@ -1,9 +1,41 @@
-body { margin:0; padding:0; }
-#map { position: absolute; top:0; bottom:0; right:0; left:0;}
-#slider { text-align: center;}
-#sliderOutput { font-size: 1.6em;}
- .mapContainer {
-     width: 100%;
-     height: 400px;
-     position: relative;
- }
+/*TO DO: create sliderContainer*/
+
+ body { margin:0; padding:0; }
+ #map { position: absolute; top:0; bottom:0; right:0; left:0;}
+ #slider { text-align: center;}
+ #sliderOutput { font-size: 1.6em;}
+ 
+ .rangeslider__fill {
+    background: #DDD none repeat scroll 0% 0%;
+    position: absolute;
+    top: 0px;
+}
+
+  .mapContainer {
+      width: 100%;
+      height: 400px;
+      position: relative;
+  }
+  .replayContainer {
+      float: right;
+      margin-bottom: 10px;
+      position: absolute;
+      right: 200px;
+      top: 450px;
+      z-index: 1000;
+  }
+  .replayButton {
+      float: right;
+      border: 1px solid #999;
+      background: #eee;
+      font-family: "Source Sans Pro", Arial, sans-serif;
+      color: #888;
+      font-size: 13px;
+      padding: 2px 6px 3px;
+      margin-left: -2px;
+      margin-top: 0px;
+      cursor: pointer;
+  }
+  .replayButton:hover {
+      background: #ddd;
+  }
