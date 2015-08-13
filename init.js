@@ -15,7 +15,7 @@ $(function() {
   // Autoplay on startup, stop at 2010, with replay button
   var currentYear = 1900;
 
-  $(".replayButton").click(function() {
+  $(".playButton").click(function() {
      $(".leaflet-marker-icon, .leaflet-shadow-pane").fadeOut(200);
      currentYear = 1900;
     //  setInterval();

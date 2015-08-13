@@ -16,7 +16,7 @@
       height: 400px;
       position: relative;
   }
-  .replayContainer {
+  .playContainer {
       float: right;
       margin-bottom: 10px;
       position: absolute;
@@ -24,7 +24,7 @@
       top: 450px;
       z-index: 1000;
   }
-  .replayButton {
+  .playButton {
       float: right;
       border: 1px solid #999;
       background: #eee;
@@ -36,6 +36,6 @@
       margin-top: 0px;
       cursor: pointer;
   }
-  .replayButton:hover {
+  .playButton:hover {
       background: #ddd;
   }
