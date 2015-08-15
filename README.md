@@ -74,7 +74,7 @@ Use rangeslider.js from https://github.com/andreruffert/rangeslider.js
 
 
 ## To Do
-- make the town geoJson layer clickable again to identify names with pop-ups
+- consider adding hover town name, in place of click for town name
 - delay initial animation startup until all map tiles are loaded (or optimize code in some way)
 - consider adding town search by name function
 - consider adding overlays such as interstate highways, etc. to test ideas about where suburbanization happened

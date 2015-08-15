@@ -93,14 +93,15 @@ $(function() {
         fillOpacity: 0
     };
   }
-// TO DO: fix this overlay layer so that features are clickable; is it hidden behind "bringToFront" of tiles?
+  // make town name visible on click
+  function onEachFeature( feature, layer) {
+  	layer.bindPopup(feature.properties.Town)
+  }
+
   var towns = L.geoJson(data, {
     style: style,
-    // onEachFeature: onEachFeature // Do I still need this?
+    onEachFeature: onEachFeature
   }).addTo(map);
-  towns.bindPopup(function (feature) {
-    return L.Util.template('<p>{Town}</p>', feature.properties);
-  });
 
   // customize source link to your GitHub repo
        map.attributionControl
