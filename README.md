@@ -4,8 +4,21 @@ historical population dot density maps for On The Line book
 ## Demo
 http://jackdougherty.github.io/otl-historical-dot-density/index.html
 
+## iframe for On The Line
+```
+[iframe src="http://jackdougherty.github.io/otl-historical-dot-density" width=700 height=600]
+
 This replaces the animated GIF suburbanization map that I created around 2005 with ArcMap, but user cannot zoom in or stop player, and no overlays
 - http://jackdougherty.github.io/otl-historical-dot-density/1900-2000-animated.gif
+
+## To Do
+- new layout: put year, instructions, replay button in map, bottom-right
+- clean up my ugly style.css
+- switch town name onClick to Hover,
+- delay initial animation startup until all map tiles are loaded (or optimize code in some way)
+- consider adding town search by name function
+- consider adding overlays such as interstate highways, etc. to test ideas about where suburbanization happened
+- suggestions and pull requests welcome
 
 ## Steps
 1. Create TileLayer in ArcGIS and host on ArcGIS Online
@@ -71,12 +84,3 @@ Use rangeslider.js from https://github.com/andreruffert/rangeslider.js
 ## Credits
 - Thanks to everyone who created esri-leaflet  
 - Thanks @andreruffer for creating rangeslider.js, which I discovered through @alvinschang, and implemented with help from @erose
-
-
-## To Do
-- consider adding hover town name, in place of click for town name
-- delay initial animation startup until all map tiles are loaded (or optimize code in some way)
-- consider adding town search by name function
-- consider adding overlays such as interstate highways, etc. to test ideas about where suburbanization happened
-- clean up appearance and style.css
-- suggestions and pull requests welcome

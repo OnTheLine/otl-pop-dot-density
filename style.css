@@ -1,8 +1,8 @@
 /*TO DO: create sliderContainer*/
 
- body { margin:0; padding:0; }
+ body { margin:0; padding:0;}
  #map { position: absolute; top:0; bottom:0; right:0; left:0;}
- #slider { text-align: center; width: 700px}
+ #slider { text-align: center;}
  #sliderOutput { font-size: 1.6em;}
 
  .rangeslider__fill {
@@ -12,17 +12,15 @@
 }
 
   .mapContainer {
-      width: 700px;
-      height: 400px;
+      height: 500px;
       position: relative;
   }
   .playContainer {
       float: right;
       margin-bottom: 10px;
       position: absolute;
-      width: 700px;
       right: 200px;
-      top: 450px;
+      top: 550px;
       z-index: 1000;
   }
   .playButton {
