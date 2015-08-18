@@ -2,9 +2,9 @@
 
  body { margin:0; padding:0; }
  #map { position: absolute; top:0; bottom:0; right:0; left:0;}
- #slider { text-align: center;}
+ #slider { text-align: center; width: 700px}
  #sliderOutput { font-size: 1.6em;}
- 
+
  .rangeslider__fill {
     background: #DDD none repeat scroll 0% 0%;
     position: absolute;
@@ -12,7 +12,7 @@
 }
 
   .mapContainer {
-      width: 100%;
+      width: 700px;
       height: 400px;
       position: relative;
   }
@@ -20,12 +20,13 @@
       float: right;
       margin-bottom: 10px;
       position: absolute;
+      width: 700px;
       right: 200px;
       top: 450px;
       z-index: 1000;
   }
   .playButton {
-      float: right;
+      float: left;
       border: 1px solid #999;
       background: #eee;
       font-family: "Source Sans Pro", Arial, sans-serif;
