@@ -7,6 +7,7 @@ http://jackdougherty.github.io/otl-historical-dot-density/index.html
 ## iframe for On The Line
 ```
 [iframe src="http://jackdougherty.github.io/otl-historical-dot-density" width=700 height=600]
+```
 
 This replaces the animated GIF suburbanization map that I created around 2005 with ArcMap, but user cannot zoom in or stop player, and no overlays
 - http://jackdougherty.github.io/otl-historical-dot-density/1900-2000-animated.gif
