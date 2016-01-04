@@ -107,4 +107,4 @@ $(function() {
        map.attributionControl
      .setPrefix('View <a href="http://github.com/jackdougherty/otl-historical-dot-density">open-source code on GitHub</a>, created with <a href="http://leafletjs.com" title="A JS library for interactive maps">Leaflet</a>');
 
-  }); // end of entire function
+}); // end of entire function
