@@ -15,7 +15,7 @@ $(function() {
   // Autoplay on startup, stop at 2010, with replay button
   var currentYear = 1900;
 
-  $(".playButton").click(function() {
+  $(".replayButton").click(function() {
      $(".leaflet-marker-icon, .leaflet-shadow-pane").fadeOut(200);
      currentYear = 1900;
     //  setInterval();
@@ -31,19 +31,12 @@ $(function() {
         }
   }, 1000);
 
-  // see ArcGIS Online My Content for extent of tile layer
-  var southWest = L.latLng(40.946250, -73.765968),
-    northEast = L.latLng(42.046797, -71.771949),
-    bounds = L.latLngBounds(southWest, northEast);
-
-  // set bounding box as maxBounds to restrict moving the map
   var map = L.map('map', {
-    maxBounds: bounds,
-    maxZoom: 11, // given that dots are randomly placed, it doesn't make sense to allow zooming further than this level
-    minZoom: 8  // check on smaller devices
+    center: [41.5, -72.7], // [41.5, -72.7] for Connecticut; [41.76, -72.67] for Hartford county or city
+    zoom: 9, // zoom 9 for Connecticut; 10 for Hartford county, 12 for Hartford city
+    maxZoom: 11,
+    scrollWheelZoom: false
   });
-  // zoom the map to bounding box
-  map.fitBounds(bounds);
 
   // set base layers, with the first to be added to the map on startup
   var baseLayers = {
@@ -82,7 +75,7 @@ $(function() {
     }).addTo(map),
     "2010": L.esri.tiledMapLayer({
       url: "http://tiles.arcgis.com/tiles/5rblLCKLgS4Td60j/arcgis/rest/services/CTPopDot2010/MapServer"
-    }).addTo(map)  // no comma at the end of the list; first map last?
+    }).addTo(map)  // no comma at the end of the list
   };
 
   // style the town geojson outlines
@@ -105,6 +98,6 @@ $(function() {
 
   // customize source link to your GitHub repo
        map.attributionControl
-     .setPrefix('View <a href="http://github.com/jackdougherty/otl-historical-dot-density">open-source code on GitHub</a>, created with <a href="http://leafletjs.com" title="A JS library for interactive maps">Leaflet</a>');
+     .setPrefix('View <a href="http://github.com/jackdougherty/otl-historical-dot-density" target="_blank"> code on GitHub</a>, created with <a href="http://leafletjs.com" title="A JS library for interactive maps">Leaflet</a>');
 
 }); // end of entire function

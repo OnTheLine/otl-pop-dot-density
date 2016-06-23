@@ -5,16 +5,18 @@
   <title>Historical dot density</title>
   <!-- load Leaflet and jQuery remotely, load style.css, init.js and data.js from local directory -->
   <link rel="stylesheet" href="http://cdn.jsdelivr.net/leaflet/0.7.3/leaflet.css" />
-  <script src="http://cdn.jsdelivr.net/leaflet/0.7.3/leaflet.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-  <!-- load rangeslider.js -->
+  <!-- Load Leaflet from a https CDN, not http. Look for updates at http://leafletjs.com/download.html -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.0-rc.1/leaflet.js"></script>
+  <!-- jQuery dependency; using v1.x to support older IE -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- load RangeSlider from local directory -->
   <script src="rangeslider.min.js"></script>
   <link rel=StyleSheet href="rangeslider.css" type="text/css">
   <link rel=StyleSheet href="style.css" type="text/css">
-  <script type="text/javascript" src="init.js"></script>
+  <script type="text/javascript" src="script.js"></script>
   <script type="text/javascript" src="data.js"></script>
   <!-- Load Esri Leaflet from CDN -->
-  <script src="http://cdn.jsdelivr.net/leaflet.esri/1.0.0/esri-leaflet.js"></script>
+  <script src="https://cdn.jsdelivr.net/leaflet.esri/2.0.0/esri-leaflet.js"></script>
 </head>
 <body>
   <div class="mapContainer">
@@ -25,8 +27,7 @@
       <input type="range" min="1900" max="2010" step="10" value="1900">
       <br />
       <output id="sliderOutput"></output>
-      <div id="infobox">Click replay button OR drag time slider.<br />1 dot = 1,000 people, randomly placed in towns<br /><em>Source: US Census summary, CT Secretary of State</em></div>
-      <div class="playContainer"><div class="playButton">Replay</div></div>
+      <div class="replayContainer"><div class="replayButton">Replay</div></div>
   </div>
 </body>
 </html>
