@@ -1,15 +1,15 @@
 # otl-historical-dot-density
-historical population dot density maps for On The Line book
+historical population dot density maps in Leaflet with time slider
 
-## Demo
+## Link
 http://jackdougherty.github.io/otl-historical-dot-density/index.html
 
-## iframe for On The Line
+## Shortcode to embed in http://OnTheLine.trincoll.edu
 ```
-[iframe src="http://jackdougherty.github.io/otl-historical-dot-density" width=700 height=600]
+[iframe src="http://jackdougherty.github.io/otl-historical-dot-density" width="100%" height=600]
 ```
 
-This replaces the animated GIF suburbanization map that I created around 2005 with ArcMap, but user cannot zoom in or stop player, and no overlays
+This replaces the animated GIF suburbanization map that I created around 2005 with ArcMap, where user cannot zoom in or stop player, with no overlays
 - http://jackdougherty.github.io/otl-historical-dot-density/1900-2000-animated.gif
 
 ## To Do
