@@ -12,18 +12,18 @@
 }
 
   .mapContainer {
-      height: 500px;
+      height: 535px;
       position: relative;
   }
-  .playContainer {
+  .replayContainer {
       float: right;
       margin-bottom: 10px;
       position: absolute;
-      right: 200px;
-      top: 550px;
+      right: 250px;
+      top: 590px;
       z-index: 1000;
   }
-  .playButton {
+  .replayButton {
       float: left;
       border: 1px solid #999;
       background: #eee;
@@ -35,6 +35,6 @@
       margin-top: 0px;
       cursor: pointer;
   }
-  .playButton:hover {
+  .replayButton:hover {
       background: #ddd;
   }
