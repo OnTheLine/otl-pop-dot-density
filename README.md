@@ -2,11 +2,11 @@
 historical population dot density maps in Leaflet with time slider
 
 ## Link
-http://jackdougherty.github.io/otl-historical-dot-density/index.html
+http://jackdougherty.github.io/otl-historical-dot-density/index-frame.html
 
 ## Shortcode to embed in http://OnTheLine.trincoll.edu
 ```
-[iframe src="http://jackdougherty.github.io/otl-historical-dot-density" width="100%" height=600]
+[iframe src="http://jackdougherty.github.io/otl-historical-dot-density/index.html" width="100%" height=625]
 ```
 
 ## Compare with
@@ -14,7 +14,7 @@ This replaces the animated GIF suburbanization map that I created around 2005 wi
 - http://jackdougherty.github.io/otl-historical-dot-density/1900-2000-animated.gif
 
 ## To Do
-- reorganize data into .csv and .geojson
+- reorganize population data into .csv and .geojson
 - add hover with town name and population over time (or better, display population as mini line chart in bottom-right of map)
 - consider adding overlays such as interstate highways, etc. to test ideas about where suburbanization happened
 - simplify directions below, if possible
