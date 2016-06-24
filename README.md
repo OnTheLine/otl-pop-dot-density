@@ -9,17 +9,15 @@ http://jackdougherty.github.io/otl-historical-dot-density/index.html
 [iframe src="http://jackdougherty.github.io/otl-historical-dot-density" width="100%" height=600]
 ```
 
-## Add caption
-- Click replay button OR drag time slider.<br />1 dot = 1,000 people, randomly placed in towns<br /><em>Source: US Census summary, CT Secretary of State</em>
-
+## Compare with
 This replaces the animated GIF suburbanization map that I created around 2005 with ArcMap, where user cannot zoom in or stop player, with no overlays
 - http://jackdougherty.github.io/otl-historical-dot-density/1900-2000-animated.gif
 
 ## To Do
 - reorganize data into .csv and .geojson
-- add hover with town name and population over time
-- consider placing slider and button inside map, bottom-right
+- add hover with town name and population over time (or better, display population as mini line chart in bottom-right of map)
 - consider adding overlays such as interstate highways, etc. to test ideas about where suburbanization happened
+- simplify directions below, if possible
 
 ## Steps
 1. Create TileLayer in ArcGIS and host on ArcGIS Online
