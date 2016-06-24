@@ -98,6 +98,6 @@ $(function() {
 
   // customize source link to your GitHub repo
        map.attributionControl
-     .setPrefix('View <a href="http://github.com/jackdougherty/otl-historical-dot-density" target="_blank"> code on GitHub</a>, created with <a href="http://leafletjs.com" title="A JS library for interactive maps">Leaflet</a>');
+     .setPrefix('View <a href="http://github.com/jackdougherty/otl-pop-dot-density" target="_blank"> code on GitHub</a>, created with <a href="http://leafletjs.com" title="A JS library for interactive maps">Leaflet</a>');
 
 }); // end of entire function
