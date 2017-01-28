@@ -3,20 +3,19 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>CT population</title>
-  <!-- load Leaflet and jQuery remotely, load style.css, init.js and data.js from local directory -->
-  <link rel="stylesheet" href="http://cdn.jsdelivr.net/leaflet/0.7.3/leaflet.css" />
-  <!-- Load Leaflet from a https CDN, not http. Look for updates at http://leafletjs.com/download.html -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.0-rc.1/leaflet.js"></script>
-  <!-- jQuery dependency; using v1.x to support older IE -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Load Leaflet from an https CDN, not http. Look for updates at http://leafletjs.com/download.html -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+  <!-- load jQuery  -->
+  <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
   <!-- load RangeSlider from local directory -->
   <script src="rangeslider.min.js"></script>
   <link rel=StyleSheet href="rangeslider.css" type="text/css">
   <link rel=StyleSheet href="style.css" type="text/css">
   <script type="text/javascript" src="script.js"></script>
   <script type="text/javascript" src="data.js"></script>
-  <!-- Load Esri Leaflet from CDN -->
-  <script src="https://cdn.jsdelivr.net/leaflet.esri/2.0.0/esri-leaflet.js"></script>
+  <!-- load Esri Leaflet -->
+  <script src="https://unpkg.com/esri-leaflet@2.0.7"></script>
 </head>
 <body>
   <div class="mapContainer">
