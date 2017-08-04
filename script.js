@@ -41,37 +41,37 @@ $(function() {
   // set base layers, with the first to be added to the map on startup
   var baseLayers = {
     "1900": L.esri.tiledMapLayer({
-      url: "http://tiles.arcgis.com/tiles/5rblLCKLgS4Td60j/arcgis/rest/services/CTPopDot1900/MapServer"
+      url: "https://tiles.arcgis.com/tiles/5rblLCKLgS4Td60j/arcgis/rest/services/CTPopDot1900/MapServer"
     }).addTo(map),
     "1910": L.esri.tiledMapLayer({
-      url: "http://tiles.arcgis.com/tiles/5rblLCKLgS4Td60j/arcgis/rest/services/CTPopDot1910/MapServer"
+      url: "https://tiles.arcgis.com/tiles/5rblLCKLgS4Td60j/arcgis/rest/services/CTPopDot1910/MapServer"
     }).addTo(map),
     "1920": L.esri.tiledMapLayer({
-      url: "http://tiles.arcgis.com/tiles/5rblLCKLgS4Td60j/arcgis/rest/services/CTPopDot1920/MapServer"
+      url: "https://tiles.arcgis.com/tiles/5rblLCKLgS4Td60j/arcgis/rest/services/CTPopDot1920/MapServer"
     }).addTo(map),
     "1930": L.esri.tiledMapLayer({
-      url: "http://tiles.arcgis.com/tiles/5rblLCKLgS4Td60j/arcgis/rest/services/CTPopDot1930/MapServer"
+      url: "https://tiles.arcgis.com/tiles/5rblLCKLgS4Td60j/arcgis/rest/services/CTPopDot1930/MapServer"
     }).addTo(map),
     "1940": L.esri.tiledMapLayer({
-      url: "http://tiles.arcgis.com/tiles/5rblLCKLgS4Td60j/arcgis/rest/services/CTPopDot1940/MapServer"
+      url: "https://tiles.arcgis.com/tiles/5rblLCKLgS4Td60j/arcgis/rest/services/CTPopDot1940/MapServer"
     }).addTo(map),
     "1950": L.esri.tiledMapLayer({
-      url: "http://tiles.arcgis.com/tiles/5rblLCKLgS4Td60j/arcgis/rest/services/CTPopDot1950/MapServer"
+      url: "https://tiles.arcgis.com/tiles/5rblLCKLgS4Td60j/arcgis/rest/services/CTPopDot1950/MapServer"
     }).addTo(map),
     "1960": L.esri.tiledMapLayer({
-      url: "http://tiles.arcgis.com/tiles/5rblLCKLgS4Td60j/arcgis/rest/services/CTPopDot1960/MapServer"
+      url: "https://tiles.arcgis.com/tiles/5rblLCKLgS4Td60j/arcgis/rest/services/CTPopDot1960/MapServer"
     }).addTo(map),
     "1970": L.esri.tiledMapLayer({
-      url: "http://tiles.arcgis.com/tiles/5rblLCKLgS4Td60j/arcgis/rest/services/CTPopDot1970/MapServer"
+      url: "https://tiles.arcgis.com/tiles/5rblLCKLgS4Td60j/arcgis/rest/services/CTPopDot1970/MapServer"
     }).addTo(map),
     "1980": L.esri.tiledMapLayer({
-      url: "http://tiles.arcgis.com/tiles/5rblLCKLgS4Td60j/arcgis/rest/services/CTPopDot1980/MapServer"
+      url: "https://tiles.arcgis.com/tiles/5rblLCKLgS4Td60j/arcgis/rest/services/CTPopDot1980/MapServer"
     }).addTo(map),
     "1990": L.esri.tiledMapLayer({
-      url: "http://tiles.arcgis.com/tiles/5rblLCKLgS4Td60j/arcgis/rest/services/CTPopDot1990/MapServer"
+      url: "https://tiles.arcgis.com/tiles/5rblLCKLgS4Td60j/arcgis/rest/services/CTPopDot1990/MapServer"
     }).addTo(map),
     "2000": L.esri.tiledMapLayer({
-      url: "http://tiles.arcgis.com/tiles/5rblLCKLgS4Td60j/arcgis/rest/services/CTPopDot2000/MapServer"
+      url: "https://tiles.arcgis.com/tiles/5rblLCKLgS4Td60j/arcgis/rest/services/CTPopDot2000/MapServer"
     }).addTo(map),
     "2010": L.esri.tiledMapLayer({
       url: "http://tiles.arcgis.com/tiles/5rblLCKLgS4Td60j/arcgis/rest/services/CTPopDot2010/MapServer"
@@ -98,6 +98,6 @@ $(function() {
 
   // customize source link to your GitHub repo
        map.attributionControl
-     .setPrefix('View <a href="http://github.com/jackdougherty/otl-pop-dot-density" target="_blank"> code on GitHub</a>, created with <a href="http://leafletjs.com" title="A JS library for interactive maps">Leaflet</a>');
+     .setPrefix('View <a href="https://github.com/jackdougherty/otl-pop-dot-density" target="_blank"> code on GitHub</a>, created with <a href="http://leafletjs.com" title="A JS library for interactive maps">Leaflet</a>');
 
 }); // end of entire function
