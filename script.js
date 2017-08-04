@@ -74,7 +74,7 @@ $(function() {
       url: "https://tiles.arcgis.com/tiles/5rblLCKLgS4Td60j/arcgis/rest/services/CTPopDot2000/MapServer"
     }).addTo(map),
     "2010": L.esri.tiledMapLayer({
-      url: "http://tiles.arcgis.com/tiles/5rblLCKLgS4Td60j/arcgis/rest/services/CTPopDot2010/MapServer"
+      url: "https://tiles.arcgis.com/tiles/5rblLCKLgS4Td60j/arcgis/rest/services/CTPopDot2010/MapServer"
     }).addTo(map)  // no comma at the end of the list
   };
 
