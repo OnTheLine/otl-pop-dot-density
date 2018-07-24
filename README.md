@@ -2,16 +2,16 @@
 population dot density maps in Leaflet with historical time slider
 
 ## Link
-https://jackdougherty.github.io/otl-pop-dot-density/index-frame.html
+https://ontheline.github.io/otl-pop-dot-density/index-frame.html
 
-## Shortcode to embed in http://OnTheLine.trincoll.edu
+## Shortcode to embed in [On The Line book](http://OnTheLine.trincoll.edu)
 ```
-[iframe src="https://jackdougherty.github.io/otl-pop-dot-density/index.html" width="100%" height=625]
+<iframe src="https://ontheline.github.io/otl-pop-dot-density/index.html" width="100%" height=625></iframe>
 ```
 
 ## Compare with
 This replaces the animated GIF suburbanization map that I created around 2005 with ArcMap, where user cannot zoom in or stop player, with no overlays
-- https://jackdougherty.github.io/otl-pop-dot-density/1900-2000-animated.gif
+- https://ontheline.github.io/otl-pop-dot-density/1900-2000-animated.gif
 
 ## To Do
 - reorganize population data into .csv and .geojson
